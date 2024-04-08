@@ -23,7 +23,7 @@ int i;
         cuenta2[(int)cadena2[i]]++;
     }
 
-    // Verificar si las frecuencias son iguales
+
     for (i = 0; i < 256; i++) {
         if (cuenta1[i] != cuenta2[i])
             return 0;
@@ -33,15 +33,13 @@ int i;
 }
 
 int main() {
+	
     char cadena1[100], cadena2[100];
-
-    // Pedir al usuario que ingrese las cadenas
     printf("Ingrese la primera cadena: ");
     scanf("%s", cadena1);
     printf("Ingrese la segunda cadena: ");
     scanf("%s", cadena2);
 
-    // Verificar si son anagramas
     if (sonAnagramas(cadena1, cadena2))
         printf("SON ANAGRAMAS\n");
     else
